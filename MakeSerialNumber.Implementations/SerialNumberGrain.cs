@@ -22,7 +22,6 @@ namespace MakeSerialNumber.Implementations
         {
             if (number == 0) { number = 1; }
 
-            Console.WriteLine("获取流水号--" + this.State.Name + "    " + number + "个");
             List<long> list = new List<long>();
             for (int i = 1; i <= number; i++)
             {
@@ -40,7 +39,6 @@ namespace MakeSerialNumber.Implementations
         public Task<long> GetSerialNumber()
         {
 
-            Console.WriteLine("获取流水号--" + this.State.Name + "    1个");
             this.WriteStateAsync();
             return Task.FromResult(1L);
         }

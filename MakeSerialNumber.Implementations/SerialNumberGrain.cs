@@ -38,9 +38,8 @@ namespace MakeSerialNumber.Implementations
         /// <returns></returns>
         public Task<long> GetSerialNumber()
         {
-
             this.WriteStateAsync();
-            return Task.FromResult(1L);
+            return Task.FromResult(this.State.Number);
         }
     }
 }

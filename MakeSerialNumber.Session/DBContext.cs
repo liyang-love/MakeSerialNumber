@@ -10,6 +10,7 @@ namespace MakeSerialNumber.Session
         public DBContext()
             : base("name=DBContext")
         {
+
         }
 
         public virtual DbSet<SerialNumberInfo> SerialNumbers { get; set; }
